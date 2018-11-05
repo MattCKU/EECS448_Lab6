@@ -1,4 +1,10 @@
-//Test.cpp
+/**
+*	@file Test.cpp
+*	@author Matthew Cherry
+*	@date 11/5/2018
+*	@brief Implementation for Test Suite
+*/
+
 #include "Test.h"
 #include <vector>
 #include <iostream>
