@@ -14,7 +14,8 @@ int main(int argc, char** argv)
 	Test foo;
 	foo.runTest();
 
-	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
+
+	std::cout << "\nRunning...\nAnd we're done.\nGoodbye.\n";
 
 	return (0);
 

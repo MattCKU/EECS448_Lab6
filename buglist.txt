@@ -2,4 +2,4 @@ buglist
 
 1. addBack actually adds to the front
 2. isEmpty always returns true
-3.    
+3. neither of the removes worked for me   

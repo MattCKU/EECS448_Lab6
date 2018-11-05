@@ -62,6 +62,17 @@ void Test::runTest()
     {
         std::cout << "FAIL" << std::endl;
     }
+
+    // Testing removeBack
+    std::cout << "Testing removeBack.... ";
+    if(testRemoveBack())
+    {
+        std::cout << "PASS" << std::endl;
+    }
+    else
+    {
+        std::cout << "FAIL" << std::endl;
+    }
 }
 
 
@@ -152,6 +163,44 @@ bool Test::testDestructor()
 {
     LinkedListOfInts a;
     std::vector<int> temp = a.toVector();
+
+
+}
+
+bool Test::testRemoveBack()
+{
+    LinkedListOfInts a;
+    std::vector<int> v;
+    if(a.removeBack() == true)
+    {
+        return false;
+    }
+
+    for(int i = 0; i < 10; i++)
+    {
+        a.addBack(i);
+        v.push_back(i);
+    }
+    a.removeBack();
+    v.pop_back();
+    if((a.toVector()) == v)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Test::testRemoveFront()
+{
+    LinkedListOfInts a;
+    std::vector<int> v;
+    if(a.removeFront() == true)
+    {
+        return false;
+    }
 
 
 }
