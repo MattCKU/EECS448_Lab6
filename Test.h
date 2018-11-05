@@ -1,20 +1,24 @@
 //Test.h
-
+#ifndef TEST_H
+#define TEST_H
 
 #include <iostream>
-#include "LinkedListofInts.h"
+#include "LinkedListOfInts.h"
 
 class Test
 {
 public:
-    bool testConstructor(LinkedListOfInts a);
-    bool testDestrucotr(LinkedListOfInts a);
-    bool testIsEmpty(LinkedListOfInts a);
-    bool testSize(LinkedListOfInts a);
-    bool testSearch(LinkedListOfInts a);
+    void runTest();
+    bool testConstructor();
+    bool testDestructor( );
+    bool testIsEmpty();
+    bool testSize();
+    bool testSearch();
     //skip test vector
-    bool testAddBack(LinkedListOfInts a);
-    bool testAddFront(LinkedListOfInts a);
-    bool testRemoveBack(LinkedListOfInts a);
-    bool testRemoveFront(LinkedListOfInts a);
-}
+    bool testAddBack();
+    bool testAddFront();
+    bool testRemoveBack();
+    bool testRemoveFront();
+};
+
+#endif
