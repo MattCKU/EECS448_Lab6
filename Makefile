@@ -3,8 +3,8 @@
 
 
 #Add needed Test.o
-prog: main.o
-	g++ -g -Wall -std=c++11 main.o LinkedListOfInts.o -o prog
+prog: main.o Test.o
+	g++ -g -Wall -std=c++11 main.o Test.o LinkedListOfInts.o -o prog
 
 
 main.o: main.cpp
