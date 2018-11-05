@@ -5,6 +5,9 @@
 *	@brief Test Suite for LinkedListOfInts
 */
 
+#pragma once
+
+
 #ifndef TEST_H
 #define TEST_H
 
@@ -20,7 +23,6 @@ public:
     void runTest();
 private:
     bool testConstructor();
-    bool testDestructor( );
     bool testIsEmpty();
     bool testSize();
     bool testSearch();

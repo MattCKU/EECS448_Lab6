@@ -79,6 +79,29 @@ void Test::runTest()
     {
         std::cout << "FAIL" << std::endl;
     }
+
+    //testing search
+    std::cout << "Testing search.... ";
+
+    if(testSearch())
+    {
+        std::cout << "PASS" << std::endl;
+    }
+    else
+    {
+        std::cout << "FAIL" << std::endl;
+    }
+
+    // Testing removeFront
+    std::cout << "Testing removeFront.... ";
+    if(testRemoveFront())
+    {
+        std::cout << "PASS" << std::endl;
+    }
+    else
+    {
+        std::cout << "FAIL" << std::endl;
+    }
 }
 
 
@@ -163,16 +186,6 @@ bool Test::testAddBack()
     }
 }
 
-
-
-bool Test::testDestructor()
-{
-    LinkedListOfInts a;
-    std::vector<int> temp = a.toVector();
-
-
-}
-
 bool Test::testRemoveBack()
 {
     LinkedListOfInts a;
@@ -208,7 +221,47 @@ bool Test::testRemoveFront()
         return false;
     }
 
+    std::vector<int> other = {4 , 3 , 2 , 1, 0 };
 
+    for (int i = 0; i < 5; i++)
+    {
+        a.addFront(i);
+    }
+    a.removeFront();
+
+    if(a.toVector() == other )
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+bool Test::testSearch()
+{
+    LinkedListOfInts a;
+    //search on empty list
+    if(a.search(10))
+    {
+        return false;
+    }
+    a.addFront(10);
+    if(a.search(10) == false)
+    {
+        return false;
+    }
+    for(int i = 0; i < 100; i++)
+    {
+        a.addFront(i);
+    }
+    if(a.search(30) == false)
+    {
+        return false;
+    }
+    return true;
 }
 
 bool Test::testIsEmpty()
